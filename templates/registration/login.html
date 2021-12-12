@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title%}
+User App | Login
+{% endblock title %}
+
+{% block content %}
+<center>
+<h1>Login</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input class="btn btn-primary ml-2" type="submit" value="submit">
+</form>
+<br>
+<a class="btn btn-primary ml-2" href="{% url 'password_reset'%}">Forgot password?</a>
+
+</center>
+{% endblock content %}
